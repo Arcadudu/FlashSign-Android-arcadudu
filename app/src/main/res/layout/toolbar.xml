@@ -7,11 +7,13 @@
     android:layout_height="wrap_content"
     android:height="?attr/actionBarSize">
 
-    <ImageView
+    <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:contentDescription="@string/rutoken"
-        app:srcCompat="@drawable/logo" />
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/rutokenWhite"
+        android:textSize="20sp" />
 
 </com.google.android.material.appbar.MaterialToolbar>

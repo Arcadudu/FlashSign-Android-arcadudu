@@ -46,6 +46,6 @@ private fun showSnackbar(view: View, message: String) {
             manager.setPrimaryClip(ClipData.newPlainText("ERROR_TEXT", message))
         }
         .setBackgroundTint(ContextCompat.getColor(view.context, R.color.rutokenBlack))
-        .setActionTextColor(ContextCompat.getColor(view.context, R.color.rutokenLightBlue))
+        .setActionTextColor(ContextCompat.getColor(view.context, R.color.rutokenLightAccent))
         .show()
 }

@@ -109,7 +109,7 @@ class UserListFragment : Fragment() {
                     ContextCompat.getColor(binding.userListLayout.context, R.color.rutokenBlack)
                 )
                 .setActionTextColor(
-                    ContextCompat.getColor(binding.userListLayout.context, R.color.rutokenLightBlue)
+                    ContextCompat.getColor(binding.userListLayout.context, R.color.rutokenLightAccent)
                 )
                 .show()
         }

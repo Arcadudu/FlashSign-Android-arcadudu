@@ -154,7 +154,7 @@ preBuild.doLast {
 }
 
 clean {
-    delete fileTree('libs').matching {
-        include 'rtpcsc*.aar', 'pkcs11wrapper*.jar'
-    }
+//    delete fileTree('libs').matching {
+//        include 'rtpcsc*.aar', 'pkcs11wrapper*.jar'
+//    }
 }

@@ -13,11 +13,11 @@ import ru.rutoken.demoshift.koin.koinModule
 import ru.rutoken.demoshift.tokenmanager.TokenManager
 import ru.rutoken.rtpcsc.RtPcsc
 
-class DemoshiftApplication : Application() {
+class FlashSignMvpApp : Application() {
     override fun onCreate() {
         super.onCreate()
         startKoin {
-            androidContext(this@DemoshiftApplication)
+            androidContext(this@FlashSignMvpApp)
             modules(koinModule)
         }
         RtPcsc.setAppContext(this)

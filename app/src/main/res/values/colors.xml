@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--prefer using colors from styles.xml in the code-->
-    <color name="rutokenRed">#DD2233</color>
-    <color name="rutokenBlue">#117788</color>
+    <color name="rutokenRed">#DC7979</color>
+    <color name="rutokenAccent">#DC7979</color>
     <color name="rutokenGray">#F5F5F5</color>
     <color name="rutokenWhite">#FFFFFF</color>
     <color name="rutokenBlack">#212529</color>
-    <color name="rutokenLightBlue">#1ea896</color>
+    <color name="rutokenLightAccent">#DC7979</color>
 </resources>

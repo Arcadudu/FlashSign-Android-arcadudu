@@ -4,11 +4,11 @@
         <item name="colorPrimary">@color/rutokenRed</item>
         <item name="colorPrimaryVariant">@color/rutokenRed</item>
         <item name="colorOnPrimary">@color/rutokenWhite</item>
-        <item name="colorSecondary">@color/rutokenBlue</item>
-        <item name="colorSecondaryVariant">@color/rutokenBlue</item>
+        <item name="colorSecondary">@color/rutokenAccent</item>
+        <item name="colorSecondaryVariant">@color/rutokenAccent</item>
         <item name="colorOnSecondary">@color/rutokenWhite</item>
         <item name="colorSurface">@color/rutokenWhite</item>
-        <item name="colorOnSurface">@color/rutokenBlue</item>
+        <item name="colorOnSurface">@color/rutokenAccent</item>
         <item name="android:colorBackground">@color/rutokenGray</item>
         <item name="android:statusBarColor">@color/rutokenRed</item>
         <item name="textInputStyle">@style/TextInputLayoutTheme</item>
@@ -30,7 +30,7 @@
     </style>
 
     <style name="TextInputLayoutTheme" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="boxStrokeColor">@color/rutokenBlue</item>
-        <item name="hintTextColor">@color/rutokenBlue</item>
+        <item name="boxStrokeColor">@color/rutokenAccent</item>
+        <item name="hintTextColor">@color/rutokenAccent</item>
     </style>
 </resources>

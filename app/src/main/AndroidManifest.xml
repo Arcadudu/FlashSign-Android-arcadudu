@@ -3,9 +3,9 @@
     package="ru.rutoken.demoshift">
 
     <application
-        android:name=".ui.main.DemoshiftApplication"
+        android:name=".ui.main.FlashSignMvpApp"
         android:allowBackup="true"
-        android:icon="@mipmap/app_icon"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
