@@ -12,6 +12,7 @@ import org.koin.core.context.startKoin
 import ru.rutoken.demoshift.koin.koinModule
 import ru.rutoken.demoshift.tokenmanager.TokenManager
 import ru.rutoken.rtpcsc.RtPcsc
+import timber.log.Timber
 
 class FlashSignMvpApp : Application() {
     override fun onCreate() {
@@ -22,5 +23,6 @@ class FlashSignMvpApp : Application() {
         }
         RtPcsc.setAppContext(this)
         get<TokenManager>()
+        Timber.plant(Timber.DebugTree())
     }
 }
