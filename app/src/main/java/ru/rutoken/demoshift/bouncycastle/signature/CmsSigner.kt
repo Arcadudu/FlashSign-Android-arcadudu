@@ -6,6 +6,7 @@
 
 package ru.rutoken.demoshift.bouncycastle.signature
 
+import org.bouncycastle.asn1.ASN1InputStream
 import org.bouncycastle.asn1.ASN1Sequence
 import org.bouncycastle.asn1.cms.ContentInfo
 import org.bouncycastle.cert.X509CertificateHolder
@@ -47,6 +48,7 @@ class CmsSigner(signature: Signature) {
                 ContentInfo.getInstance(ASN1Sequence.fromByteArray(outStream.toByteArray()))
             )
         }
+
         return writer.toString()
     }
 }

@@ -35,6 +35,7 @@ import ru.rutoken.pkcs11wrapper.constant.standard.Pkcs11AttributeType
 import ru.rutoken.pkcs11wrapper.constant.standard.Pkcs11UserType
 import ru.rutoken.pkcs11wrapper.main.Pkcs11Session
 import ru.rutoken.pkcs11wrapper.main.Pkcs11Token
+import timber.log.Timber
 import java.io.FileNotFoundException
 import java.io.InputStream
 import java.util.concurrent.ExecutionException

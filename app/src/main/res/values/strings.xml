@@ -10,7 +10,8 @@
     <string name="sign">Sign</string>
     <string name="back_to_user_list">Back to the user list</string>
     <string name="copy_text">Copy</string>
-    <string name="error_text">Something went wrong.\nTry  the operation again</string>
+    <string name="error_text">Something went wrong.\nGo back and try again</string>
+    <string name="try_again">Try again</string>
     <string name="add_user">Add user</string>
     <string name="pin_hint">Enter PIN</string>
     <string name="pin_continue">Continue</string>
@@ -37,7 +38,8 @@
     <string name="user_removed">User has been removed</string>
     <string name="undo">Undo</string>
     <string name="select_file">Select file</string>
-    <string name="can_not_display_file">Selected file can not be displayed\n\nOnly PDF files can be displayed</string>
+    <string name="can_not_display_file">Selected file can not be displayed\n\nOnly PDF files and images can be displayed</string>
+    <string name="select_file_to_sign">Select file to sign</string>
     <string name="too_many_tokens">Several Rutokens are connected to the device\n\nPlease leave only one</string>
     <string name="algorithm">Algorithm</string>
     <string name="inn">INN</string>

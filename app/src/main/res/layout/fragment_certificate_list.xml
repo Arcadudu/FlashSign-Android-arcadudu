@@ -24,11 +24,28 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
 
-                <ru.rutoken.demoshift.ui.workprogress.WorkProgressView
-                    android:id="@+id/workProgress"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/default_spacing" />
+                    android:orientation="vertical">
+
+                    <ru.rutoken.demoshift.ui.workprogress.WorkProgressView
+                        android:id="@+id/workProgress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/default_spacing" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_back"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Назад"/>
+
+                </LinearLayout>
+
+
 
             </ScrollView>
 

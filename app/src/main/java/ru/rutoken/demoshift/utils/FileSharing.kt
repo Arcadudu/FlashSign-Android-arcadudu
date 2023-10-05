@@ -11,6 +11,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.core.content.FileProvider
 import ru.rutoken.demoshift.R
+import ru.rutoken.demoshift.bouncycastle.signature.CmsSigner
 import java.io.File
 
 fun copyAssetToCache(filename: String, context: Context) {
@@ -19,7 +20,7 @@ fun copyAssetToCache(filename: String, context: Context) {
 }
 
 fun shareFileAndSignature(fileUri: Uri, signature: String, context: Context): Intent {
-    val signatureFile = File(context.cacheDir, "/signature.pem")
+    val signatureFile = File(context.cacheDir, "/signature.sig")
     signatureFile.outputStream().use { it.write(signature.toByteArray()) }
 
     val signatureUri =

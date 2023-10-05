@@ -1,49 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!--toolbar-->
     <include
         android:id="@+id/toolbarLayout"
         layout="@layout/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <com.github.barteksc.pdfviewer.PDFView
-        android:id="@+id/documentPdfView"
+    <!--main container-->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        app:layout_constraintBottom_toTopOf="@id/button_container"
+        app:layout_constraintTop_toBottomOf="@id/toolbarLayout">
 
-    <TextView
-        android:id="@+id/unsupportedFileSelected"
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/documentPdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/unsupportedFileSelected"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/select_file_to_sign"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/image_document_viewer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--button container-->
+    <LinearLayout
+        android:id="@+id/button_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="@string/can_not_display_file"
-        android:textSize="20sp" />
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <Button
-        android:id="@+id/selectButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:insetTop="0dp"
-        android:insetBottom="4dp"
-        android:text="@string/select_file"
-        app:backgroundTint="?attr/colorSecondary"
-        app:shapeAppearance="?attr/shapeAppearanceLargeComponent" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/selectButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetTop="0dp"
+            android:insetBottom="4dp"
+            android:text="@string/select_file"
+            app:backgroundTint="?attr/colorSecondary"
+            app:shapeAppearance="?attr/shapeAppearanceLargeComponent" />
 
-    <Button
-        android:id="@+id/signButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:insetTop="4dp"
-        android:insetBottom="0dp"
-        android:text="@string/sign"
-        app:backgroundTint="?attr/colorSecondary"
-        app:shapeAppearance="?attr/shapeAppearanceLargeComponent" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetTop="4dp"
+            android:insetBottom="0dp"
+            android:text="@string/sign"
+            android:visibility="gone"
+            app:backgroundTint="?attr/colorSecondary"
+            app:shapeAppearance="?attr/shapeAppearanceLargeComponent" />
 
-</LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

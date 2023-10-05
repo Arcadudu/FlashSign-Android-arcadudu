@@ -12,6 +12,7 @@ import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -24,6 +25,7 @@ import ru.rutoken.demoshift.ui.certificatelist.CertificateListFragmentDirections
 import ru.rutoken.demoshift.ui.workprogress.WorkProgressView.Status
 import ru.rutoken.demoshift.utils.asReadableText
 import ru.rutoken.demoshift.utils.showError
+import timber.log.Timber
 
 class CertificateListFragment : Fragment() {
     private lateinit var binding: FragmentCertificateListBinding
@@ -63,10 +65,20 @@ class CertificateListFragment : Fragment() {
             binding.certificatesView.visibility = if (result.isSuccess) VISIBLE else GONE
             binding.workProgress.visibility = if (result.isSuccess) GONE else VISIBLE
 
+
+
             if (result.isSuccess)
                 certificatesListAdapter.certificates = result.getOrThrow()
-            else
+            else{
                 binding.workProgress.setStatus(Status(result.getFailureMessage()))
+                binding.buttonBack.apply{
+                    isVisible = true
+                    setOnClickListener {
+                        findNavController().popBackStack()
+                    }
+                }
+            }
+
         }
 
         viewModel.addUserResult.observe(viewLifecycleOwner) { result ->
@@ -75,12 +87,11 @@ class CertificateListFragment : Fragment() {
                 findNavController().navigate(toUserListFragment())
             } else {
                 showError(binding.certificatesRecyclerView, result.getFailureMessage())
+
             }
         }
     }
 
     private fun <T> Result<T>.getFailureMessage() =
-        exceptionOrNull()?.asReadableText(requireContext())
-            ?: "${getString(R.string.error_text)}\n\n" +
-            (exceptionOrNull() as Exception).message.orEmpty()
+        exceptionOrNull()?.asReadableText(requireContext()) ?: "${getString(R.string.error_text)}."
 }

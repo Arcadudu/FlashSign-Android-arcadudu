@@ -14,16 +14,19 @@ import ru.rutoken.demoshift.utils.copyAssetToCache
 import java.io.File
 
 class DocumentViewModel(context: Context) : ViewModel() {
-    val documentUri: MutableLiveData<Uri> = MutableLiveData(
-        FileProvider.getUriForFile(
-            context,
-            "ru.rutoken.demoshift.fileprovider",
-            File(context.cacheDir, "/${DEFAULT_DOCUMENT}")
-        )
-    )
+//    val documentUri: MutableLiveData<Uri> = MutableLiveData(
+//        FileProvider.getUriForFile(
+//            context,
+//            "ru.rutoken.demoshift.fileprovider",
+//            File(context.cacheDir, "/${DEFAULT_DOCUMENT}")
+//        )
+//    )
+
+    val documentUri: MutableLiveData<Uri> = MutableLiveData()
+
 
     init {
-        copyAssetToCache(DEFAULT_DOCUMENT, context)
+//        copyAssetToCache(DEFAULT_DOCUMENT, context)
     }
 
     companion object {

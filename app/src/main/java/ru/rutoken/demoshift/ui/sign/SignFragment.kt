@@ -9,6 +9,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -53,13 +55,20 @@ class SignFragment : Fragment() {
                     )
                 )
             } else {
-                val exceptionMessage = (result.exceptionOrNull() as Exception).message.orEmpty()
+                // no need to specify error for user
+//                val exceptionMessage = (result.exceptionOrNull() as Exception).message.orEmpty()
                 binding.workProgress.setStatus(
                     Status(
                         result.exceptionOrNull()?.asReadableText(requireContext())
-                            ?: "${getString(R.string.error_text)}\n\n" + exceptionMessage
+                            ?: "${getString(R.string.error_text)}."
                     )
                 )
+                binding.buttonTryAgain.apply {
+                    isVisible = true
+                    setOnClickListener {
+                        findNavController().popBackStack()
+                    }
+                }
             }
         }
     }

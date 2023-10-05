@@ -10,7 +10,8 @@
     <string name="sign">Подписать</string>
     <string name="back_to_user_list">К списку пользователей</string>
     <string name="copy_text">Копировать</string>
-    <string name="error_text">Что-то пошло не так.\nПопробуйте повторить операцию</string>
+    <string name="error_text">Что-то пошло не так.\nВернитесь и повторите операцию</string>
+    <string name="try_again">Попробовать снова</string>
     <string name="add_user">Добавить пользователя</string>
     <string name="pin_hint">Введите PIN-код</string>
     <string name="pin_continue">Продолжить</string>
@@ -37,7 +38,8 @@
     <string name="user_removed">Пользователь удалён</string>
     <string name="undo">Отмена</string>
     <string name="select_file">Выбрать файл</string>
-    <string name="can_not_display_file">Не удалось отобразить файл\n\nВозможно отображение только PDF файлов</string>
+    <string name="can_not_display_file">Не удалось отобразить файл\n\nВозможно отображение только\nPDF файлов и изображений</string>
+    <string name="select_file_to_sign">Выберите файл для подписания</string>
     <string name="too_many_tokens">К устройству подключено несколько Рутокенов\n\nПожалуйста, оставьте только один</string>
     <string name="algorithm">Алгоритм</string>
     <string name="inn">ИНН</string>
